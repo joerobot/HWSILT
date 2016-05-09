@@ -1,71 +1,173 @@
-/*
-Error: File to import not found or unreadable: neat/neat-helpers.
-        on line 1 of neat/_grid-settings.scss
-        from line 3 of style.scss
+html {
+  box-sizing: border-box; }
 
-1: @import "bourbon/bourbon";
-2: @import "neat/neat";
-3: @import "neat/grid-settings";
-4: 
-5: @include font-face("arconregular", "arcon-regular-webfont", $file-formats: woff2 woff);
-6: 
+*, *::after, *::before {
+  box-sizing: inherit; }
 
-Backtrace:
-neat/_grid-settings.scss:1
-style.scss:3
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: neat/neat-helpers.\A         on line 1 of neat/_grid-settings.scss\A         from line 3 of style.scss\A \A 1: @import \"bourbon/bourbon\";\A 2: @import \"neat/neat\";\A 3: @import \"neat/grid-settings\";\A 4: \A 5: @include font-face(\"arconregular\", \"arcon-regular-webfont\", $file-formats: woff2 woff);\A 6: "; }
+@font-face {
+  font-family: "arconregular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("arcon-regular-webfont.woff2") format("woff2"), url("arcon-regular-webfont.woff") format("woff"); }
+body {
+  font-family: "arconregular", serif;
+  font-size: 16px;
+  color: #232323;
+  font-weight: 400;
+  text-align: center; }
+
+h2 {
+  font-size: 2.75rem;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  font-weight: 400; }
+
+section {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%; }
+  section:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 800px) {
+    section {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 74.10533%; }
+      section:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 800px) {
+    section {
+      margin-left: 12.94733%; } }
+
+.wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .wrapper::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.ask-me {
+  margin-top: 8rem; }
+  @media screen and (max-width: 500px) {
+    .ask-me {
+      margin-top: 4rem; } }
+
+.seed {
+  display: inline; }
+
+.seed input {
+  display: inline;
+  font-family: "arconregular", serif;
+  font-size: 2.75rem;
+  color: #232323;
+  background-color: transparent;
+  border: solid 1px #232323;
+  border-bottom: solid 3px #232323;
+  border-left: solid 3px #232323;
+  width: 19.25rem;
+  outline: 0;
+  padding: 0.25rem 1rem;
+  margin-left: 0.25rem;
+  font-weight: 400;
+  text-transform: capitalize; }
+  @media screen and (max-width: 800px) {
+    .seed input {
+      width: 100%; } }
+  @media screen and (max-width: 500px) {
+    .seed input {
+      margin: 0; } }
+  @media screen and (max-width: 500px) {
+    .seed input {
+      text-align: center; } }
+
+.recommends {
+  margin-top: 6rem;
+  text-align: center;
+  display: none; }
+
+.return {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 5.5rem; }
+
+.return a {
+  color: #77d4e5; }
+
+.return a:hover {
+  opacity: 0.5; }
+
+.miniwrapper {
+  display: table;
+  min-height: 2.75rem;
+  margin: 0 auto; }
+
+.another {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #bf1c4d;
+  border-radius: 1rem;
+  color: #FFF;
+  margin-top: 2.75rem;
+  cursor: pointer;
+  border-bottom: 3px solid #7a1433;
+  border-left: 2px solid #7a1433;
+  border-right: 2px solid #7a1433; }
+
+.another:hover {
+  border-bottom: 2px solid #7a1433;
+  border-left: 1px solid #7a1433;
+  border-right: 1px solid #7a1433; }
+
+.another:active {
+  border: none; }
+
+.errors {
+  display: none;
+  margin-top: 6rem; }
+
+.error-text {
+  color: #bf1c4d;
+  font-size: 2rem;
+  font-weight: 200; }
+
+.moreinfo {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+  background-color: #bf1c4d;
+  color: #FFFFFF;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  cursor: pointer; }
+
+.moreinfo p {
+  line-height: 2rem;
+  padding: 0.05rem 0 0;
+  margin: 0; }
+
+.info {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90%;
+  background-color: #bf1c4d;
+  color: #FFF;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  padding: 12rem 2rem 0; }
+  @media screen and (max-width: 500px) {
+    .info {
+      padding-top: 6rem; } }
+
+/*# sourceMappingURL=main.css.map */

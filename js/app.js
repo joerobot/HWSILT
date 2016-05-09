@@ -5,7 +5,7 @@ var counter = 0;
 var relatedArtists;
 var randomIndex = Math.floor(Math.random()*20);
 
-
+// Display result, if first time fadeIn.
 var showMe = function(recommended){
   if(counter == 0){
     $('.return a').attr('href', recommended.url).text(recommended.name);
@@ -23,7 +23,7 @@ var showMe = function(recommended){
 
 
 
-
+// Get Results
 var getRequest = function(seed){
   var params = {
     limit : 20,
@@ -42,13 +42,11 @@ var getRequest = function(seed){
     }
     else{
       relatedArtists = data.similarartists.artist;
-      // var randomize = Math.floor(Math.random()*20);
-      // showMe(data.similarartists.artist[randomize]);
       randomSelection(relatedArtists);
     }
   });
 }
-
+// Display random index from returned Array
 var randomSelection = function(array){
   randomIndex = Math.floor(Math.random()*20);
   showMe(array[randomIndex]);
@@ -59,6 +57,7 @@ var randomSelection = function(array){
 
 $(document).ready(function(){
 
+    // Submit query and remove focus
     $('.seed').submit(function(e){
       e.preventDefault();
       var seed = $('.seed input').val();
@@ -67,17 +66,23 @@ $(document).ready(function(){
       $('.seed input').blur();
     });
 
+    // Clear input on clik
     $('.seed input').on('click', function(){
       $('.seed input').val("");
     });
 
+    // Something Else button
     $('body').on('click', '.another', function(){
       showMe(relatedArtists[randomIndex + 1]);
       randomIndex = Math.floor(Math.random()*19);
     });
 
+    // Toggle info pane
     $('.moreinfo').click(function(){
       $('.info').slideToggle(200);
+    })
+    $('body').on('click', '.info', function(){
+      $('.info').slideUp(200);
     })
 
 
