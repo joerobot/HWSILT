@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+@font-face {
+  font-family: "arconregular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("arcon-regular-webfont.woff2") format("woff2"), url("arcon-regular-webfont.woff") format("woff"); }
+body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "arconregular", serif; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/*# sourceMappingURL=style.css.map */
